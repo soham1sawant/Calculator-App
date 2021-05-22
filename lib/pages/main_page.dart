@@ -19,7 +19,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          color: Colors.grey[850],
+          color: Color(0xff22252e),
           child: Column(
             children: [
               Expanded(
@@ -40,7 +40,7 @@ class _MainPageState extends State<MainPage> {
                 flex: 3,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.grey[800],
+                    color: Color(0xff2a2d36),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(35.0),
                       topRight: Radius.circular(35.0),
@@ -49,52 +49,215 @@ class _MainPageState extends State<MainPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            MaterialButton(
-                              onPressed: () {},
-                              color: Colors.white,
-                              height: 50.0,
-                              minWidth: 50.0,
-                              
+                            Container(
+                              child: Center(
+                                child: Text("AC"),
+                              ),
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
                             ),
-                            MaterialButton(
-                              onPressed: () {},
-                              color: Colors.white,
-                              height: 50.0,
-                              minWidth: 50.0,
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
                             ),
-                            MaterialButton(
-                              onPressed: () {},
-                              color: Colors.white,
-                              height: 50.0,
-                              minWidth: 50.0,
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
                             ),
-                            MaterialButton(
-                              onPressed: () {},
-                              color: Colors.white,
-                              height: 50.0,
-                              minWidth: 50.0,
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
                             ),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [],
+                          children: [
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                          ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [],
+                          children: [
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                          ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [],
+                          children: [
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                          ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [],
+                          children: [
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
