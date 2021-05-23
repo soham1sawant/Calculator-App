@@ -8,6 +8,27 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   final myController = TextEditingController();
 
+  Widget calcButton(String text, Color color) {
+    return Container(
+      child: Center(
+        child: Text(
+          text,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20.0,
+            color: color,
+          ),
+        ),
+      ),
+      height: 60.0,
+      width: 60.0,
+      decoration: BoxDecoration(
+        color: Color(0xff2b2936),
+        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+      ),
+    );
+  }
+
   @override
   void dispose() {
     myController.dispose();
@@ -27,12 +48,7 @@ class _MainPageState extends State<MainPage> {
                 child: Container(
                   color: Colors.transparent,
                   child: Column(
-                    children: [
-                      TextField(
-                        controller: myController,
-                      ),
-                      TextField(),
-                    ],
+                    children: [],
                   ),
                 ),
               ),
@@ -54,406 +70,46 @@ class _MainPageState extends State<MainPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "AC",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Color(0xff4fedd0),
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "+/-",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Color(0xff4fedd0),
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "%",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Color(0xff4fedd0),
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "/",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Color(0xffaf767c),
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
+                            calcButton("AC", Color(0xff61cfbd)),
+                            calcButton("+/-", Color(0xff61cfbd)),
+                            calcButton("%", Color(0xff61cfbd)),
+                            calcButton("AC", Color(0xffe8788c)),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "7",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "8",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "9",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "X",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Color(0xffaf767c),
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
+                            calcButton("7", Colors.white),
+                            calcButton("8", Colors.white),
+                            calcButton("9", Colors.white),
+                            calcButton("X", Color(0xffe8788c)),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "4",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "5",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "6",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "-",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Color(0xffaf767c),
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
+                            calcButton("4", Colors.white),
+                            calcButton("5", Colors.white),
+                            calcButton("6", Colors.white),
+                            calcButton("-", Color(0xffe8788c)),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "1",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "2",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "3",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "+",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Color(0xffaf767c),
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
+                            calcButton("1", Colors.white),
+                            calcButton("2", Colors.white),
+                            calcButton("3", Colors.white),
+                            calcButton("+", Color(0xffe8788c)),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "<",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "0",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  ".",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              child: Center(
-                                child: Text(
-                                  "=",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Color(0xffaf767c),
-                                  ),
-                                ),
-                              ),
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
+                            calcButton("<", Colors.white),
+                            calcButton("0", Colors.white),
+                            calcButton(".", Colors.white),
+                            calcButton("=", Color(0xffe8788c)),
                           ],
                         ),
                       ],
