@@ -56,7 +56,14 @@ class _MainPageState extends State<MainPage> {
                           children: [
                             Container(
                               child: Center(
-                                child: Text("AC"),
+                                child: Text(
+                                  "AC",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Color(0xff4fedd0),
+                                  ),
+                                ),
                               ),
                               height: 60.0,
                               width: 60.0,
@@ -67,6 +74,16 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "+/-",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Color(0xff4fedd0),
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -76,6 +93,16 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "%",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Color(0xff4fedd0),
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -85,88 +112,16 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             Container(
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
+                              child: Center(
+                                child: Text(
+                                  "/",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Color(0xffaf767c),
+                                  ),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
-                              height: 60.0,
-                              width: 60.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xff2b2936),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                            ),
-                            Container(
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -181,6 +136,16 @@ class _MainPageState extends State<MainPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "7",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -190,6 +155,16 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "8",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -199,6 +174,16 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "9",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -208,6 +193,16 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "X",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Color(0xffaf767c),
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -222,6 +217,16 @@ class _MainPageState extends State<MainPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "4",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -231,6 +236,16 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "5",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -240,6 +255,16 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "6",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
@@ -249,6 +274,178 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             Container(
+                              child: Center(
+                                child: Text(
+                                  "-",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Color(0xffaf767c),
+                                  ),
+                                ),
+                              ),
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  "1",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  "2",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  "3",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  "+",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Color(0xffaf767c),
+                                  ),
+                                ),
+                              ),
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  "<",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  "0",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  ".",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              height: 60.0,
+                              width: 60.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xff2b2936),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0)),
+                              ),
+                            ),
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  "=",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0,
+                                    color: Color(0xffaf767c),
+                                  ),
+                                ),
+                              ),
                               height: 60.0,
                               width: 60.0,
                               decoration: BoxDecoration(
