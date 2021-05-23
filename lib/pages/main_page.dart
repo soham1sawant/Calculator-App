@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:expressions/expressions.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -6,33 +7,54 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  final myController = TextEditingController();
+  String exp = "";
+  String ans = "";
 
-  Widget calcButton(String text, Color color) {
-    return Container(
-      child: Center(
-        child: Text(
-          text,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20.0,
-            color: color,
-          ),
-        ),
-      ),
-      height: 60.0,
-      width: 60.0,
-      decoration: BoxDecoration(
-        color: Color(0xff2b2936),
-        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-      ),
-    );
+  void calculate() {
+    exp = exp.replaceAll('X', '*');
+    Expression expression = Expression.parse(exp);
+    final evaluator = const ExpressionEvaluator();
+    var context = {'X': '*'};
+    ans = evaluator.eval(expression, context).toString();
   }
 
-  @override
-  void dispose() {
-    myController.dispose();
-    super.dispose();
+  Widget calcButton(String text, Color color) {
+    return InkWell(
+      onTap: () {
+        if ((text != 'AC') &&
+            (text != '+/-') &&
+            (text != '=') &&
+            (text != '<')) {
+          exp += text;
+          setState(() {});
+        } else if (text == 'AC') {
+          exp = "";
+          ans = "";
+          setState(() {});
+        } else if (text == '=') {
+          calculate();
+          setState(() {});
+        }
+      },
+      child: Container(
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+              color: color,
+            ),
+          ),
+        ),
+        height: 60.0,
+        width: 60.0,
+        decoration: BoxDecoration(
+          color: Color(0xff2b2936),
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+        ),
+      ),
+    );
   }
 
   @override
@@ -46,9 +68,33 @@ class _MainPageState extends State<MainPage> {
               Expanded(
                 flex: 2,
                 child: Container(
+                  padding: EdgeInsets.fromLTRB(0, 140.0, 20.0, 0),
                   color: Colors.transparent,
                   child: Column(
-                    children: [],
+                    children: [
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          exp,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 35.0,
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          ans,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 50.0,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -73,7 +119,7 @@ class _MainPageState extends State<MainPage> {
                             calcButton("AC", Color(0xff61cfbd)),
                             calcButton("+/-", Color(0xff61cfbd)),
                             calcButton("%", Color(0xff61cfbd)),
-                            calcButton("AC", Color(0xffe8788c)),
+                            calcButton("/", Color(0xffe8788c)),
                           ],
                         ),
                         Row(
