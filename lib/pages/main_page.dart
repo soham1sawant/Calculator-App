@@ -1,3 +1,4 @@
+import 'package:calculator/widgets/calc_button.dart';
 import 'package:flutter/material.dart';
 import 'package:expressions/expressions.dart';
 import 'package:provider/provider.dart';
@@ -28,42 +29,6 @@ class Display extends ChangeNotifier {
 }
 
 class MainPage extends StatelessWidget {
-  Widget calcButton(BuildContext context, String text, Color color) {
-    return InkWell(
-      onTap: () {
-        var expression = context.read<Display>();
-        if ((text != 'AC') &&
-            (text != '+/-') &&
-            (text != '=') &&
-            (text != '<')) {
-          expression.addText(text);
-        } else if (text == 'AC') {
-          expression.clearText();
-        } else if (text == '=') {
-          expression.calculate();
-        }
-      },
-      child: Container(
-        child: Center(
-          child: Text(
-            text,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20.0,
-              color: color,
-            ),
-          ),
-        ),
-        height: 60.0,
-        width: 60.0,
-        decoration: BoxDecoration(
-          color: Color(0xff2b2936),
-          borderRadius: BorderRadius.all(Radius.circular(20.0)),
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,26 +48,26 @@ class MainPage extends StatelessWidget {
                         alignment: Alignment.centerRight,
                         child: Consumer<Display>(
                           builder: (context, expression, child) => Text(
-                          '${expression.exp}',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 35.0,
+                            '${expression.exp}',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 35.0,
+                            ),
                           ),
-                        ),
                         ),
                       ),
                       Align(
                         alignment: Alignment.centerRight,
                         child: Consumer<Display>(
                           builder: (context, expression, child) => Text(
-                          '${expression.ans}',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 50.0,
+                            '${expression.ans}',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 50.0,
+                            ),
                           ),
-                        ),
                         ),
                       ),
                     ],
@@ -127,46 +92,46 @@ class MainPage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            calcButton(context, "AC", Color(0xff61cfbd)),
-                            calcButton(context, "+/-", Color(0xff61cfbd)),
-                            calcButton(context, "%", Color(0xff61cfbd)),
-                            calcButton(context, "/", Color(0xffe8788c)),
+                            CalcButton(text: "AC", color: Color(0xff61cfbd)),
+                            CalcButton(text: "+/-", color: Color(0xff61cfbd)),
+                            CalcButton(text: "%", color: Color(0xff61cfbd)),
+                            CalcButton(text: "/", color: Color(0xffe8788c)),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            calcButton(context, "7", Colors.white),
-                            calcButton(context, "8", Colors.white),
-                            calcButton(context, "9", Colors.white),
-                            calcButton(context, "X", Color(0xffe8788c)),
+                            CalcButton(text: "7", color: Colors.white),
+                            CalcButton(text: "8", color: Colors.white),
+                            CalcButton(text: "9", color: Colors.white),
+                            CalcButton(text: "X", color: Color(0xffe8788c)),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            calcButton(context, "4", Colors.white),
-                            calcButton(context, "5", Colors.white),
-                            calcButton(context, "6", Colors.white),
-                            calcButton(context, "-", Color(0xffe8788c)),
+                            CalcButton(text: "4", color: Colors.white),
+                            CalcButton(text: "5", color: Colors.white),
+                            CalcButton(text: "6", color: Colors.white),
+                            CalcButton(text: "-", color: Color(0xffe8788c)),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            calcButton(context, "1", Colors.white),
-                            calcButton(context, "2", Colors.white),
-                            calcButton(context, "3", Colors.white),
-                            calcButton(context, "+", Color(0xffe8788c)),
+                            CalcButton(text: "1", color: Colors.white),
+                            CalcButton(text: "2", color: Colors.white),
+                            CalcButton(text: "3", color: Colors.white),
+                            CalcButton(text: "+", color: Color(0xffe8788c)),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            calcButton(context, "<", Colors.white),
-                            calcButton(context, "0", Colors.white),
-                            calcButton(context, ".", Colors.white),
-                            calcButton(context, "=", Color(0xffe8788c)),
+                            CalcButton(text: "<", color: Colors.white),
+                            CalcButton(text: "0", color: Colors.white),
+                            CalcButton(text: ".", color: Colors.white),
+                            CalcButton(text: "=", color: Color(0xffe8788c)),
                           ],
                         ),
                       ],
