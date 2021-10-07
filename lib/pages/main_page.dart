@@ -1,32 +1,7 @@
+import 'package:calculator/logic/display.dart';
 import 'package:calculator/widgets/calc_button.dart';
 import 'package:flutter/material.dart';
-import 'package:expressions/expressions.dart';
 import 'package:provider/provider.dart';
-
-class Display extends ChangeNotifier {
-  String exp = "";
-  String ans = "";
-
-  void addText(String char) {
-    exp += char;
-    notifyListeners();
-  }
-
-  void clearText() {
-    exp = "";
-    ans = "";
-    notifyListeners();
-  }
-
-  void calculate() {
-    exp = exp.replaceAll('X', '*');
-    Expression expression = Expression.parse(exp);
-    final evaluator = const ExpressionEvaluator();
-    var context = {'X': '*'};
-    ans = evaluator.eval(expression, context).toString();
-    notifyListeners();
-  }
-}
 
 class MainPage extends StatelessWidget {
   @override

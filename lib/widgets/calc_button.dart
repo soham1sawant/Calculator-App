@@ -1,4 +1,4 @@
-import 'package:calculator/pages/main_page.dart';
+import 'package:calculator/logic/display.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
